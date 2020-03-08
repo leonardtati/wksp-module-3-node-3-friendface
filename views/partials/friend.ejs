@@ -1,0 +1,20 @@
+
+            <div class="FacePage">
+                <div class="FacePage__logo"></div>
+                    <%/* to reference the sub classes of ranking in scss we must use the parent'div name followed by __ and the child's class name like so ranking__rank*/%>
+                
+                    <img class="FacePage__user--main" src= <%= user.avatarUrl %> > </img>
+            </div>
+                    
+            <ol>   
+                <% listOfFriends.forEach(friend=> { %>      
+            <li>
+                <div class= "FacePage__userFriends" >
+                    <a href = "/user/<%=friend.id %>" >
+                    <img class="FacePage__userFriends--friends" src= <%= friend.avatarUrl %> ></img>
+                    </a>
+                </div>
+            </div> 
+        </li>
+                <% }); %>   
+        </ol>
